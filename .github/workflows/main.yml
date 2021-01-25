@@ -32,4 +32,11 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: generate the pdf
-        run: xelatex /github/workspace/examples/resume.tex
+        run: xelatex /github/workspace/nikhil-resume/resume.tex
+      # upload artefact
+      - uses: actions/upload-artifact@v2
+        with:
+          name: myresume
+          path: /github/workspace/resume.pdf
+
+
